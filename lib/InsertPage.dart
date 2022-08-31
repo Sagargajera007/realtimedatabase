@@ -22,8 +22,8 @@ class _insertpageState extends State<insertpage> {
     super.initState();
 
     if (widget.map != null) {
-      tname = widget.map!['name'];
-      tnumber = widget.map!['contact'];
+      tname.text = widget.map!['name'];
+      tnumber.text = widget.map!['contact'];
     }
   }
 
@@ -68,8 +68,10 @@ class _insertpageState extends State<insertpage> {
                 onPressed: () {
                   if (tname.text.isNotEmpty || tnumber.text.isNotEmpty) {
                     FirebaseDatabase database = FirebaseDatabase.instance;
+
                     String name = tname.text;
                     String contact = tnumber.text;
+
                     if (widget.map == null) {
                       DatabaseReference ref = database.ref("contactbook").push();
 
