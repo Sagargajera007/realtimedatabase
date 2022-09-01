@@ -9,7 +9,7 @@ class viewdata extends StatefulWidget {
   @override
   State<viewdata> createState() => _viewdataState();
 }
-
+ 
 class _viewdataState extends State<viewdata> {
   List l = [];
   bool status = false;
